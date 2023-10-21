@@ -12,7 +12,7 @@ func main() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		fmt.Println("you have requested the file")
 
-		tmpl := template.Must(template.ParseFiles("./index.html"))
+		tmpl := template.Must(template.ParseFiles("./templates/index.html"))
 
 		tmpl.Execute(w, nil)
 	})
